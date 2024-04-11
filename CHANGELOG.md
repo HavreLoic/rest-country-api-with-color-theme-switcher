@@ -8,6 +8,8 @@
 
 **✨ Improvements:**
 
+- Add Error page for HTTP errors
+
 ** Bug Fixes:**
 
 ** Removed Features (if applicable):**
@@ -16,9 +18,10 @@
 
 ** Added:**
 
-*  React
-*  Typescript
-*  Vitest
-*  Tailwind
+- React
+- Typescript
+- Vitest
+- Tailwind
+- React Router Dom
 
 ** Removed:**

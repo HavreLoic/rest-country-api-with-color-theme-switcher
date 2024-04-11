@@ -20,11 +20,11 @@ export default {
       lg: "1440px",
       xl: "1280px",
     },
-    fontWeight: {
-      normal: 300,
-      bold: 600,
-      bolder: 800,
-    },
+    // fontWeight: {
+    //   normal: 300,
+    //   bold: 600,
+    //   bolder: 800,
+    // },
   },
   plugins: [], // Add any Tailwind plugins here
 };

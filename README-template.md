@@ -50,6 +50,9 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ## My process
 
+- Project setup: Adding dependencies and files setup
+- Add ErrorPage for HTTP Errors and Routing
+
 ### Built with
 
 - Semantic HTML5 markup
