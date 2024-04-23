@@ -1,4 +1,4 @@
-import { DropDown, SearchBar, } from "../Components"
+import { CountryInfoSummaryContainer, DropDown, SearchBar, } from "../Components"
 import { continents } from "../Data"
 const Home = () => {
     return (
@@ -7,6 +7,17 @@ const Home = () => {
                 <SearchBar type="text" placeholder="Search for a country..." />
                 <DropDown dropDownTitle="Filter by Region" options={continents} />
             </div>
+
+            <CountryInfoSummaryContainer />
+            {/* <div className="p-5">
+            <CountryInfoSummary
+                    capital="Yaounde"
+                    image=""
+                    name="Cameroon"
+                    population={123456789}
+                    region="Africa"
+                />
+</div> */}
         </>
     )
 }
