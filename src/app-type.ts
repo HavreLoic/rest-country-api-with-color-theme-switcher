@@ -1,4 +1,4 @@
 export type ErrorPageType = {
-  statusText?: string;
+  statusText?: string | number;
   message?: string;
 };

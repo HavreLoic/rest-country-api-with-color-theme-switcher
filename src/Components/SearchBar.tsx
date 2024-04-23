@@ -4,7 +4,7 @@ interface SearchBarInterface extends DetailedHTMLProps<InputHTMLAttributes<HTMLI
 }
 
 export const SearchBar = (props: SearchBarInterface) => {
-    const searchLoop = "public/assets/icons/search-loop.svg";
+    const searchLoop = "assets/icons/search-loop.svg";
     const searchBarProps = { ...props };
     return (
         <div className="flex">
