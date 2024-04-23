@@ -9,15 +9,6 @@ const Home = () => {
             </div>
 
             <CountryInfoSummaryContainer />
-            {/* <div className="p-5">
-            <CountryInfoSummary
-                    capital="Yaounde"
-                    image=""
-                    name="Cameroon"
-                    population={123456789}
-                    region="Africa"
-                />
-</div> */}
         </>
     )
 }
