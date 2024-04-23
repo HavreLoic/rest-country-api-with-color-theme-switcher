@@ -15,6 +15,7 @@ export default {
       sans: ["Nunito", "Sans"],
     },
     screens: {
+      xs: "200px",
       sm: "375px",
       md: "768px",
       lg: "1440px",

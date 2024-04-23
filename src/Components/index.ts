@@ -1,3 +1,3 @@
 export * from "./TopBar";
-export * from "./Filters";
+export * from "./DropDown";
 export * from "./SearchBar";
