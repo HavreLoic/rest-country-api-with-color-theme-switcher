@@ -7,7 +7,7 @@ export const SearchBar = (props: SearchBarInterface) => {
     const searchLoop = "assets/icons/search-loop.svg";
     const searchBarProps = { ...props };
     return (
-        <div className="flex xs:mb-7 md:mb-0">
+        <div className="flex xs:mb-7 md:mb-0 bg-white rounded-md p-3">
             <img src={searchLoop} alt="search glass" />
             <input {...searchBarProps} />
         </div>
