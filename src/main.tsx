@@ -6,23 +6,27 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import { ErrorPage } from './Pages/ErrorPage.tsx';
 import { TopBar } from './Components/TopBar.tsx';
+import { CountryDetailPage, ErrorPage } from './Pages';
+import { CountryNameProvider } from './Context';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <ErrorPage />,
-    children: [
-      {}
-    ]
+    errorElement: <ErrorPage />
   },
+  {
+    path: ":country",
+    element: <CountryDetailPage />,
+  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <TopBar />
-    <RouterProvider router={router} />
+    <CountryNameProvider>
+      <RouterProvider router={router} />
+    </CountryNameProvider>
   </React.StrictMode>,
 )
