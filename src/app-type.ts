@@ -28,11 +28,11 @@ export type countriesDetailType = {
   region: string;
   capital: string[];
   flags: FlagsType;
-  subRegion: string;
-  topLevelDomain: string[];
+  subregion: string;
+  tld: string[];
   currencies: currenciesType;
   languages: languages;
-  borderCountries: string[];
+  borders: string[];
 };
 
 export type countryNameType = {
