@@ -60,3 +60,8 @@ export type CountryNameContextType = {
   countryName: string;
   changeCountry: (name: string) => void;
 };
+
+export type ThemeContextType = {
+  theme: string;
+  changeTheme: (name: string) => void;
+};
