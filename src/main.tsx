@@ -25,11 +25,11 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <TopBar />
     <ThemeProvider>
-      <CountryNameProvider>
-        <RouterProvider router={router} />
-      </CountryNameProvider>
+      <TopBar />
     </ThemeProvider>
+    <CountryNameProvider>
+      <RouterProvider router={router} />
+    </CountryNameProvider>
   </React.StrictMode>,
 )

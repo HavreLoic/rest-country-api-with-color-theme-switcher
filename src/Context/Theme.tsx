@@ -1,19 +1,13 @@
 import { createContext, useState } from 'react'
 import { ThemeContextType } from '../app-type';
 
-export const ThemeContext = createContext<ThemeContextType | null>(null);
+export const ThemeContext = createContext<ThemeContextType | string>('');
 
 export const ThemeProvider = ({ children }: { children: JSX.Element }) => {
-    const [theme, setTheme] = useState('');
+    const [theme, setTheme] = useState("light-mode");
 
     const changeTheme = (name: string) => {
-
-        if (name === 'light-mode') {
-            setTheme('dark-mode');
-
-        } else if (name === 'dark-mode') {
-            setTheme('light-mode')
-        }
+        setTheme(name === 'light-mode' ? 'dark-mode' : 'light-mode');
     };
 
     return (
