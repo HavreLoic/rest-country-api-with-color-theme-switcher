@@ -1,6 +1,6 @@
 import { CountryInfoSummaryContainer, DropDown, SearchBar, } from "../Components"
 import { continents } from "../Data"
-const Home = () => {
+export const Home = () => {
     return (
         <div className="bg-very-light-gray">
             <div className="md:flex md:justify-between xs:block p-5">

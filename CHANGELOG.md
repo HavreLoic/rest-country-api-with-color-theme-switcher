@@ -23,5 +23,6 @@
 - Vitest
 - Tailwind
 - React Router Dom
+- React Testing Library
 
 ** Removed:**
