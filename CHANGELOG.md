@@ -4,7 +4,9 @@
 
 ## ✨ Version [Version Number] - [05/04/2024]
 
-** New Features:**
+** Features:**
+
+- Search for countries
 
 **✨ Improvements:**
 
@@ -24,5 +26,6 @@
 - Tailwind
 - React Router Dom
 - React Testing Library
+- Mock Service Worker
 
 ** Removed:**
