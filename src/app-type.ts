@@ -65,3 +65,8 @@ export type ThemeContextType = {
   theme: string;
   changeTheme: (name: string) => void;
 };
+
+export type SearchTermContextType = {
+  searchTerm: string;
+  changeSearchTerm: (name: string) => void;
+};
