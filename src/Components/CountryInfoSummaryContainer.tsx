@@ -3,10 +3,11 @@ import { useDebounce, useFetch } from "../Hooks";
 import { SearchTermContextType, countriesInfoSummaryType } from "../app-type";
 import { CountryInfoSummary } from "./CountryInfoSummary";
 import { SearchContext } from "../Context";
+import { numberWithCommas } from "../utils";
 
 export const CountryInfoSummaryContainer = () => {
     const { searchTerm } = useContext(SearchContext) as SearchTermContextType;
-    const debouncedValue = useDebounce(searchTerm, 600);
+    const debouncedValue = useDebounce(searchTerm, 1000);
 
     const countryToShow = debouncedValue.length < 1 ? "https://restcountries.com/v3.1/all" : `https://restcountries.com/v3.1/name/${debouncedValue}`;
 
@@ -20,7 +21,7 @@ export const CountryInfoSummaryContainer = () => {
                     capital={country.capital}
                     flags={country.flags}
                     name={country.name}
-                    population={country.population}
+                    population={numberWithCommas(country.population)}
                     region={country.region}
                 />
             ))}

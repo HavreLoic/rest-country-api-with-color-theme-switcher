@@ -27,11 +27,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ThemeProvider>
       <TopBar />
+      <SearchProvider>
+        <CountryNameProvider>
+          <RouterProvider router={router} />
+        </CountryNameProvider>
+      </SearchProvider>
     </ThemeProvider>
-    <SearchProvider>
-      <CountryNameProvider>
-        <RouterProvider router={router} />
-      </CountryNameProvider>
-    </SearchProvider>
   </React.StrictMode>,
 )

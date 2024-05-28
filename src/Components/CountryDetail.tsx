@@ -1,4 +1,7 @@
-import { countriesDetailType } from "../app-type"
+import { useContext } from "react";
+import { ThemeContextType, countriesDetailType } from "../app-type"
+import { ThemeContext } from "../Context";
+import { darkModeThemeBackGround, lightModeThemeBackGround } from "../global";
 
 export const CountryDetail = ({
     name,
@@ -12,16 +15,18 @@ export const CountryDetail = ({
     subregion,
     tld
 }: countriesDetailType) => {
+    const { theme } = useContext(ThemeContext) as ThemeContextType;
+
     return (
         <div className="md:grid md:grid-cols-2 md:gap-16">
             <div className="xs:mb-10">
                 <img src={flags.png} alt={name.official} className="xs:w-full sm:w-[400px] xs:h-[200px] object-cover md:w-full md:h-[60vh]" />
             </div>
 
-            <div className="md:p-7">
+            <div className={`md:p-7 ${theme === "light-mode" ? lightModeThemeBackGround : darkModeThemeBackGround}`}>
                 <p className="font-extrabold text-[1.125rem] font-sans mb-5">{name.official}</p>
                 <div className="md:grid md:grid-cols-2 md:gap-12">
-                    <div className="xs:mb-5">
+                    <div className={`xs:mb-5`}>
                         <p className="mb-2"><b>Native name: </b>{name.common}</p>
                         <p className="mb-2"><b>Population: </b>{population}</p>
                         <p className="mb-2"><b>Region: </b>{region}</p>

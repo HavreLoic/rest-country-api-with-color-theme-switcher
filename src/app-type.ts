@@ -10,7 +10,7 @@ export type optionType = {
 
 export type countriesInfoSummaryType = {
   name: countryNameType;
-  population: number;
+  population: string;
   region: string;
   capital: string[];
   flags: FlagsType;
@@ -24,7 +24,7 @@ export type languages = {
 
 export type countriesDetailType = {
   name: countryNameType;
-  population: number;
+  population: string;
   region: string;
   capital: string[];
   flags: FlagsType;
