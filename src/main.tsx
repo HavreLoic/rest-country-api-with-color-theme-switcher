@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import { TopBar } from './Components/TopBar.tsx';
 import { CountryDetailPage, ErrorPage } from './Pages';
-import { CountryNameProvider, ThemeProvider, SearchProvider } from './Context';
+import { CountryNameProvider, ThemeProvider, SearchProvider, RegionNameProvider } from './Context';
 
 const router = createBrowserRouter([
   {
@@ -28,9 +28,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <ThemeProvider>
       <TopBar />
       <SearchProvider>
-        <CountryNameProvider>
-          <RouterProvider router={router} />
-        </CountryNameProvider>
+        <RegionNameProvider>
+          <CountryNameProvider>
+            <RouterProvider router={router} />
+          </CountryNameProvider>
+        </RegionNameProvider>
       </SearchProvider>
     </ThemeProvider>
   </React.StrictMode>,

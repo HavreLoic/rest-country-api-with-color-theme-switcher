@@ -1,16 +1,18 @@
 import { useContext } from "react"
 import { CountryInfoSummaryContainer, DropDown, SearchBar, } from "../Components"
 import { continents } from "../Data"
-import { SearchContext, ThemeContext } from "../Context"
-import { SearchTermContextType, ThemeContextType } from "../app-type"
+import { RegionNameContext, SearchContext, ThemeContext } from "../Context"
+import { RegionNameType, SearchTermContextType, ThemeContextType } from "../app-type"
 import { darkModeThemeBackGround, darkModeThemeCard, lightModeThemeBackGround, lightModeThemeCard } from "../global"
 
 export const Home = () => {
     const { searchTerm, changeSearchTerm } = useContext(SearchContext) as SearchTermContextType;
     const { theme } = useContext(ThemeContext) as ThemeContextType;
+    const { changeRegionName } = useContext(RegionNameContext) as RegionNameType;
 
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         changeSearchTerm(e.target.value);
+        changeRegionName("");
     }
 
     return (

@@ -1,15 +1,29 @@
 import { useContext } from "react";
 import { useDebounce, useFetch } from "../Hooks";
-import { SearchTermContextType, countriesInfoSummaryType } from "../app-type";
+import { RegionNameType, SearchTermContextType, countriesInfoSummaryType } from "../app-type";
 import { CountryInfoSummary } from "./CountryInfoSummary";
-import { SearchContext } from "../Context";
+import { RegionNameContext, SearchContext } from "../Context";
 import { numberWithCommas } from "../utils";
 
 export const CountryInfoSummaryContainer = () => {
     const { searchTerm } = useContext(SearchContext) as SearchTermContextType;
+    const { regionName } = useContext(RegionNameContext) as RegionNameType;
     const debouncedValue = useDebounce(searchTerm, 1000);
 
-    const countryToShow = debouncedValue.length < 1 ? "https://restcountries.com/v3.1/all" : `https://restcountries.com/v3.1/name/${debouncedValue}`;
+    let countryToShow = "";
+
+    if (regionName.length > 1) {
+        countryToShow = `https://restcountries.com/v3.1/region/${regionName}`;
+    } else if (debouncedValue.length < 1) {
+        countryToShow = "https://restcountries.com/v3.1/all";
+    } else {
+        countryToShow = `https://restcountries.com/v3.1/name/${debouncedValue}`;
+    }
+
+    // const countryToShow = regionName.length > 1 && `https://restcountries.com/v3.1/region/${regionName}` || debouncedValue.length < 1 ? "https://restcountries.com/v3.1/all" : `https://restcountries.com/v3.1/name/${debouncedValue}`;
+    console.log("regionName ", regionName);
+
+    console.log(countryToShow);
 
     const data: countriesInfoSummaryType[] = useFetch(countryToShow)
 

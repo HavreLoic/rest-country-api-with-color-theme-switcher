@@ -70,3 +70,8 @@ export type SearchTermContextType = {
   searchTerm: string;
   changeSearchTerm: (name: string) => void;
 };
+
+export type RegionNameType = {
+  regionName: string;
+  changeRegionName: (name: string) => void;
+};
